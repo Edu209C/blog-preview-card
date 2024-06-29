@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500,800&display=swap');
+
+:root{
+	/*Colors*/
+	--Yellow: hsl(47, 88%, 63%);
+	--White: hsl(0, 0%, 100%);
+	--Grey: hsl(0, 0%, 50%);
+	--Black: hsl(0, 0%, 7%);
+	
+	/*paragraph size*/
+	
+	--size: 16px;
+	
+	/*fonts*/
+	--font-Figtree: "Figtree", sans-serif;
+	
+	/*paths*/
+	--illustration-article: url('assets/images/illustration-article.svg'); 
+	
+	/*radius*/
+	--radius: 10px;
+}
+
+*{
+	margin: 0;
+	box-sizing: border-box;	
+}
+
+body{
+	font-family: var(--font-Figtree);
+	background-color: var(--Yellow);
+	padding: 8rem 0;
+}
+
+.container{
+	width: 90%;
+	max-width: 350px;
+	margin: 0 auto;
+	padding: 1rem;
+	background-color: var(--White);
+}
+
+.card{
+	border: 1px solid black;
+	border-radius: var(--radius);
+	background-color: var(--White);
+	box-shadow: 5px 5px;
+}
+
+.card__image{
+	
+	width: 100%;
+	height: 200px;
+	background-image: var(--illustration-article);
+	background-position: center;
+	background-size: cover;
+	border-radius: var(--radius);
+}
+
+.card__texts{	margin-top: 1rem;}
+
+.card__cta{
+	
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	color: var(--Black);
+	background-color: var(--Yellow);
+	text-align: center;
+	font-size: .8rem;
+	font-weight: 800;
+	border-radius: var(--radius);
+}
+
+.card__date{
+	
+	display: block;
+	margin-top: 1rem;
+	font-size: .7rem;
+	font-weight: 500;
+}
+
+.card__title{
+	
+	font-size: 1.2rem;
+	margin: 1rem 0;
+	font-weight: 800;
+}
+
+.card__title:hover{
+	
+	cursor: pointer;
+	color: var(--Yellow);	
+}
+
+.card__paragraph{
+	
+	color: var(--Grey);
+	font-size: .9rem;
+	line-height: 1.6;
+	margin-top: 1rem;
+	margin-bottom: 1.2rem;
+}
+
+.card__profile{
+	
+	display: inline-block;
+	position: relative;
+}
+
+.card__profile::after{
+	
+	content: "Greg Hooper";
+	position: absolute;
+	left: 40px;
+	top: 50%;
+	color: black;
+	font-size: .8rem;
+	font-weight: 800;
+	transform: translateY(-50%);
+	width: 100px;
+}
+
+.card__icon{
+	
+	display: block;
+	width: 2rem;
+	height: 2rem;	
+}
